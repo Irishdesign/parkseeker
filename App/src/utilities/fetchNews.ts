@@ -1,6 +1,5 @@
 export const fetchNews = () => {
     const url = "http://localhost:3000/news";
-
     return fetch(url, {
         method: "GET",
         headers: {

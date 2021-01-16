@@ -1,4 +1,4 @@
-import { ParkData, eventData, UPDATE_ROWDATA, DataActionTypes, UPDATE_CURRENT_DATA, UPDATE_DETAIL } from "./types";
+import { ParkData, eventData, UPDATE_ROWDATA, DataActionTypes, UPDATE_DETAIL } from "./types";
 
 export function updateRowData(newData: ParkData[]): DataActionTypes {
     return {

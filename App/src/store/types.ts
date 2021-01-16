@@ -1,20 +1,16 @@
 export const UPDATE_ROWDATA = "UPDATE_ROWDATA";
-export const UPDATE_CURRENT_DATA = "UPDATE_CURRENT_DATA";
 export const UPDATE_DETAIL = "UPDATE_DETAIL";
 
 export enum fetchtype {
     stateCode = "stateCode",
     parkCode = "parkCode",
 }
-
 // Define data types
 export interface DataState {
     rowData: ParkData[];
-    //  currentData: ParkData[]
     detailData: ParkData[];
     eventData: eventData[];
 }
-
 export interface ParkData {
     id: string;
     parkCode: string;
@@ -95,13 +91,6 @@ interface UpadteDataAction {
     type: typeof UPDATE_ROWDATA;
     payload: ParkData[];
 }
-// interface setCurrentDataAction {
-//     type: typeof UPDATE_CURRENT_DATA;
-//     payload: {
-//         page: number;
-//     };
-// }
-
 interface setDetailData {
     type: typeof UPDATE_DETAIL;
     payload: {
