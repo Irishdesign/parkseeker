@@ -1,0 +1,100 @@
+@import "settings.scss";
+* {
+    a {
+        text-decoration: none;
+        color: $primary;
+    }
+}
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 70px;
+    justify-content: space-around;
+}
+.searchBar {
+    color: #fff;
+    background-color: $primary;
+    height: 55px;
+    margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .searchInput {
+        border-bottom: 2px solid #fff;
+        width: 40%;
+        height: 70%;
+        min-width: 240px;
+        margin: 0 auto;
+        @media screen and (max-width: $mobileSize) {
+            margin-left: 30%;
+        }
+        display: flex;
+        align-items: flex-end;
+        > input {
+            border: unset;
+            outline-style: none;
+            background: $primary;
+            color: #fff;
+            width: 100%;
+            font-size: 20px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+        .searchBtn {
+            cursor: pointer;
+        }
+    }
+}
+.pages {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+}
+.progress {
+    @include flexCenter;
+    padding-top: 100px;
+}
+.mask,
+.detailCard {
+    z-index: 150;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.detailCard {
+    z-index: 200;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.mask {
+    background-color: rgba($color: #333, $alpha: 0.6);
+}
+.card {
+    margin-top: 15px;
+}
+.dropdown {
+    margin-left: 30px;
+    @media screen and (max-width: $mobileSize) {
+        margin-left: 10px;
+    }
+    > select {
+        height: 30px;
+    }
+}
+.news_btn {
+    font-weight: 800;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    cursor: pointer;
+    @media screen and (max-width: 480px) {
+        left: 5px;
+        font-size: 12px;
+    }
+}
